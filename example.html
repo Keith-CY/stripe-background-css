@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example</title>
+<style>
+.bg{
+height:300px;
+width:300px;
+}
+.type1{
+background: linear-gradient(#fb3 20%, #58a 80%);
+}
+.type2{background: linear-gradient(#fb3 50%, #58a 50%);}
+.type3{background-size:100% 30px;}
+.type4{
+background: linear-gradient(45deg, #fb3 50%, #58a 50%);
+background-size:30px 30px;
+}
+.type5{background: repeating-linear-gradient(45deg, #fb3, #58a 30px)}
+.type6{
+background: #58a;
+background-image: repeating-linear-gradient(45deg, hsla(0,0%,100%,.1),hsla(0,0%,100%,.1) 15px,transparent 0, transparent 30px);}
+</style>
+</head>
+<body>
+<div class="bg type1">background: linear-gradient(#fb3 20%, #58a 80%);<br>
+整个背景上下各有20%的纯色, 中间是过渡颜色</div>
+<div class="bg type2">background: linear-gradient(#fb3 50%, #58a 50%);<br>
+上下两部分都是纯色</div>
+<div class="bg type2 type3">添加 background-size:100% 30px;<br>
+宽100%, 高30px, 默认 repeat
+</div>
+<div class="bg type4">斜向条纹<br>
+修改 linear-gradient 的角度: linear-gradient(45deg, #fb3 50%, #58a 50%)<br>
+添加重复:background-size:30px;</div>
+<div class="bg type5">使用 repeat-linear-gradient:<br>
+background: repeating-linear-gradient(45deg, #fb3, #58a 30px)</div>
+<div class="bg type6">关于颜色设定, 如果我们希望条纹使用相近的颜色, 可以使用如下方法:<br>
+background: #58a;<br>
+background-image: repeating-linear-gradient(30deg, hsla(0,0%,100%,.1),hsla(0,0%,100%,.1) 15px,transparent 0, transparent 30px);
+<br>其原理是指定背景中最深的颜色, 其他颜色用透明度调整
+<div>
+</body>
+</html>
